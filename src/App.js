@@ -4,13 +4,13 @@ import Categories from './Components/Categories'
 import Menu from './Components/Menu'
 
 function App() {
-  const categoriValue=['all',...new Set(menus.map(item=>item.category))]
+  const categoriValue=['همه',...new Set(menus.map(item=>item.category))]
    console.log(categoriValue);
    const[allMenus,setAllMenu]=useState(menus)
    const [categories]=useState(categoriValue)
 
    const filterMenus=(category)=>{
-    if(category=='all'){
+    if(category=='همه'){
       setAllMenu(menus)
       return
     }
@@ -22,7 +22,7 @@ function App() {
     <main>
       <section className="menu section">
         <div className="title">
-          <h2>our menu</h2>
+          <h2>ایستگاه خوشمزه</h2>
           <div className="underline"></div>
         </div>
         <Categories categories={categories} filterMenus={filterMenus} />

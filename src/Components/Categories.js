@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Categories = ({categories,filterMenus}) => {
-  const [mainCategory,setMainCategory]=useState('all')
+  const [mainCategory,setMainCategory]=useState('همه')
   return (
     <div className="btn-container">
       {categories.map((category,index)=>(
